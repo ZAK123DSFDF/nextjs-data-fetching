@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Client() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState<{ joke: string }>({ joke: "" });
   const fetchData = async () => {
     try {
       const response = await fetch("https://icanhazdadjoke.com/", {
